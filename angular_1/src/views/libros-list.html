@@ -1,0 +1,12 @@
+<h2>Libros</h2>
+<span class="mini">{{var1}}</span>
+ 
+<ul>
+    <li ng-repeat="obj in libros">
+        <a href="#/libro/{{obj.id}}"><img ng-src="{{obj.img}}" width="95" height="150"></a>
+ 
+         <p><a href="#/libro/{{obj.id}}">{{obj.titulo}}</a><br /><br />
+               <strong>{{obj.editorial}}</strong><br />
+               {{obj.descripcion}}</p>
+    </li>
+</ul>
