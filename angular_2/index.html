@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="phonecatApp">
 <head>
 	<meta charset="utf-8">
 	<title>Angular exercise 2</title>
@@ -8,24 +8,25 @@
 	<link rel="stylesheet" type="text/css" href="vendor/css/bootstrap-theme.min.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 
-	<script type="text/javascript" scr="vendor/js/bootstrap.min.js"></script>
-	<script type="text/javascript" scr="vendor/js/angular.min.js"></script>
+	<script scr="vendor/js/bootstrap.min.js"></script>
+	<script scr="vendor/js/angular.min.js"></script>
 	<!--<script type="text/javascript" scr="vendor/js/angular-route.min.js"></script>
 	<script type="text/javascript" scr="vendor/js/angular-animate.min.js"></script>-->
+
+	<script src="src/controllers/controllers.js"></script>
 
 
 
 
 </head>
-<body>
-	<h1>Angular Example</h1>
+<body ng-controller="PhoneListCtrl">
 
-
-	<p>Nothing here {{'yet' + '!'}}</p>
-
-
-
-
+  <ul>
+    <li ng-repeat="phone in phones">
+      {{phone.name}}
+      <p>{{phone.snippet}}</p>
+    </li>
+  </ul>
 
 </body>
 </html>
